@@ -1,54 +1,47 @@
 /**
   ******************************************************************************
   * @file    main.c
-  * @author  Mouadh Dahech
+  * @author  Mohamed Bouchagra
   * @brief   How to develop structured code 
   * @version V1.0.0
-  * @date    16-10-2022
+  * @date    27-10-2022
   *****************************************************************************/
 /* Includes ------------------------------------------------------------------*/
-
+#include <stdio.h>
+#include <stdlib.h>
 /* Macros --------------------------------------------------------------------*/
-#define SOM
-//#define MUL
-#define MUL
-//#define OTHERS
-
+#define Mul(a,b) a*b 
+#define Max(a,b) a > b ? a : b 
+//#define INTEL
+#define OTHERS
+#define Min(a,b) a < b ? a : b 
+#define Som(a,b) a+b 
 
 /* Private function prototypes -----------------------------------------------*/
-static int sum(int var1,int var2);
-static int mul(int var1,int var2);
+
 /* Private functions ---------------------------------------------------------*/
 
 /**
   * @brief  Main program
-  * @param  None
+  * @param  x,y
   * @retval None
   */
-
 int main(void)
 {
-#ifdef SOM
-int ResultSum= sum(3,4);
-#endif
-#ifdef MUL
-int ResultMul= mul(3,4);
-#endif
-  while (1)
+  int x = 6;
+  int y = 3;
+  int  mult = Mul(x,y);
+  int somme = Som(x,y);
+  int min   = Min(x,y);
+  int max   = Max(x,y);
+  while(1)
   {
-   
+  printf("La Somme de deux valeur ==: %d\n",somme);
+  printf("La Multplication de deux valeur ==: %d\n",mult);
+  printf("la valeur minimale est ==: %d\n",min);
+  printf("la valeur maximale est ==: %d\n",max);
   }
+  
 }
-#ifdef SOM
-static int sum(int var1,int var2)
-{
-  return(var1+var2);
-}
-#endif
-#ifdef MUL
-static int mul(int var1,int var2)
-{
-  return(var1*var2);
-}
-#endif
+
 /**************************************END OF FILE**************************************/
